@@ -41,15 +41,58 @@ body {
 
 .clickEffect{
   position: absolute;
-  width: 60px;
-  height: 60px;
+  width: 80px;
+  height: 80px;
   border: 5px solid #c1f5e2;
-  margin-top: -30px;
-  margin-left: -30px;
+  margin-top: -40px;
+  margin-left: -40px;
   border-radius: 50%;
   animation-name: ripple;
   animation-duration: 0.7s;
   animation-timing-function: linear;
+}
+
+.lilypad {
+  position: absolute; 
+  display: block;
+  background-color:#c3fa98;
+  border-radius: 50%;
+}
+
+.pond {
+  position: relative;
+  height: 25vw;
+  width: 25vw;
+  margin-left: auto;
+  margin-right:auto;
+  top: 30%;
+  border: solid 5px red;
+  animation-name: rotate;
+  animation-duration: 10s;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+}
+
+.koi {
+  height: 5vw;
+  width: 25vw;
+  left: 37vw;
+  top: 10vw;
+  background-color: rgb(234, 158, 107);
+
+}
+
+#l1 {
+  height: 20vw;
+  width: 20vw;
+  bottom: 3vw;
+  left: 3vw;
+}
+#l2 {
+  height: 10vw;
+  width: 10vw;
+  bottom: 12vw;
+  left: 25vw;
 }
 
 @keyframes ripple {
@@ -65,5 +108,17 @@ body {
   100% {
     opacity: 0;
     transform: scale(1);
+  }
+}
+
+@keyframes rotate {
+  0% {
+    transform: rotate(0deg)
+  }
+  50% {
+    transform: rotate(180deg)
+  }
+  100% {
+    transform: rotate(360deg)
   }
 }
